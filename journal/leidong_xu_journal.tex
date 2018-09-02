@@ -1,0 +1,121 @@
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%% Add your name here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\Student{Student: Leidong Xu}
+
+\def\Report{Journal}
+\def\Term{Fall 2018}
+\def\Mentor{Instructor: Pietro Poggi-Corradini}
+\def\Title{Class: Applied Math I}
+
+
+% import packages
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage[margin=1in,bottom=1.5in]{geometry}
+
+% set up page headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textbf{\Student\\ \Report: \Term  \\ \Title\\ \Mentor}}
+\setlength{\headheight}{0.75in}
+
+% some formatting options
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+
+
+\begin{document}
+
+\textbf{Week 1:}
+This week, I attended all the three lecture of Applied Math I and the major topic was going over linear algebra.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em Convergence Analysis of the Nonlinear Coarse-Mesh Finite Difference Method for One-Dimensional Fixed-Source Neutron Diffusion Problem}
+\item {\em A Comparison of Coarse Mesh Rebalance (CMR) and Coarse Mesh Finite Difference (CMFD) Acceleration Methods for the Neutron Transport Calculations}
+\end{itemize}
+
+\textbf{Things I learned:}
+\subsection*{Went Over}
+\begin{itemize}
+\item Eigenvalue and Eigenvector
+\item Finite element method
+\item Matrix Factorization
+\item Gauss Elimination 
+\item LU factorization Jordan decomposition and Schur decomposition $A = QUQ^{-1}$
+\end{itemize}
+\subsection*{New}
+\begin{itemize}
+\item Condition number\\
+We compute $f(x+\delta x)-f(x) \approx |\delta x|\cdot |f'(x)|$ and $|f'(x)|$ is absolute condition number.\\
+We compute $\frac{|f(x+\delta x)-f(x)|}{|f(x)|}  \approx \frac{|\delta x|}{|x| }\cdot \frac{|f'(x)| \cdot |x|}{|f(x)|}$ and $|f'(x)|$ is relative condition number.
+\item Absolute error and relative error: $|y-\bar y|$ and $\frac{|y-\bar y|}{|y|}$
+\item Backward error $\delta x$ could be defined by $alg(x) = f(x + \delta x)$. This error is used for verify the stability of an algorithm. 
+\item Round-off effects The results could lose its digits by a bad algorithm,etc switch rows before using Gauss elimination.
+\item Floating Point Algorithm
+A float number stored in computer included sign, fraction, base and exponent. An IEEE double precision has 64 total bits. 
+\item overflow/underflow threshold are the maximum and minimum value of an certain standard float number. etc, the underflow of IEEE float is $2^{1022}$ and overflow is $2^1024$
+\item machine epsilon $\epsilon$ 
+Machine epsilon could be define as $ fl(a) = a(1+ \delta ) \; | \delta | \leq \epsilon $ when all the numbers are not beyond the overflow/underflow.
+
+\end{itemize}
+
+\textbf{Software Code:}
+ \begin{itemize}
+\item Create a repository on Github for all the assignments and Journals in the rest of the semester.
+\end{itemize}
+
+
+\textbf{Also, only for this week: Personal Intro}
+
+Hi, my name is Leidong Xu. And I have been studying mechanical and nuclear engineering in K-state for five years. This academic year will be the second year for my master degree. My thesis is related to using numerical method solving engineering and science problems on Computational Fluid Dynamics and Nuclear systems, which include preconditioner(sparse matrix) and geometric multigrid method.\\ \\ I did not take any pure mathematic class in the past 3 years, and almost all the courses I took last year were using programming to solve PDEs and ODEs. Things get boring when I continue stayed in finite difference all the time. This also the main reason I come to this class, I hope I can have a better understanding of linear algebra and have a better understanding of those numerical methods in a view of applied math.   
+
+%%%%% Here's how to create a new entry
+
+\newpage 
+
+\textbf{Week 2:}
+This week, I studied the rest parts of Chapter 1 which included vector and matrix norm and also a good start of Chapter
+
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em Linear Independence Oracles and Applications toRectangular and Low Rank Linear Systems}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\subsection*{Went Over}
+\begin{itemize}
+\item Eigenvalue and Eigenvector
+\item Finite element method
+\item Matrix Factorization
+\item Gauss Elimination 
+\item LU factorization Jordan decomposition and Schur decomposition $A = QUQ^{-1}$
+\end{itemize}
+\subsection*{New}
+\begin{itemize}
+\item Condition number\\
+We compute $f(x+\delta x)-f(x) \approx |\delta x|\cdot |f'(x)|$ and $|f'(x)|$ is absolute condition number.\\
+We compute $\frac{|f(x+\delta x)-f(x)|}{|f(x)|}  \approx \frac{|\delta x|}{|x| }\cdot \frac{|f'(x)| \cdot |x|}{|f(x)|}$ and $|f'(x)|$ is relative condition number.
+\item Absolute error and relative error: $|y-\bar y|$ and $\frac{|y-\bar y|}{|y|}$
+\item Backward error $\delta x$ could be defined by $alg(x) = f(x + \delta x)$. This error is used for verify the stability of an algorithm. 
+\item Round-off effects The results could lose its digits by a bad algorithm,etc switch rows before using Gauss elimination.
+\item Floating Point Algorithm
+A float number stored in computer included sign, fraction, base and exponent. An IEEE double precision has 64 total bits. 
+\item overflow/underflow threshold are the maximum and minimum value of an certain standard float number. etc, the underflow of IEEE float is $2^{1022}$ and overflow is $2^1024$
+\item machine epsilon $\epsilon$ 
+Machine epsilon could be define as $ fl(a) = a(1+ \delta ) \; | \delta | \leq \epsilon $ when all the numbers are not beyond the overflow/underflow.
+
+\end{itemize}
+
+\textbf{Software Code:}
+ \begin{itemize}
+\item Create a repository on Github for all the assignments and Journals in the rest of the semester.
+\end{itemize}
+
+
+\end{document}
+
