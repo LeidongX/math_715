@@ -82,14 +82,28 @@ This week, I studied the rest parts of Chapter 1 which included vector and matri
 \textbf{References or papers consulted:}
 \begin{itemize}
 
-\item {\em Linear Independence Oracles and Applications toRectangular and Low Rank Linear Systems}
+\item {\em Linear Independence Oracles and Applications to Rectangular and Low Rank Linear Systems}
 
 \end{itemize}
 
 \textbf{Things I learned:}
 \begin{itemize}
-\item Condition number\\
-We compute $f(x+\delta x)-f(x) \approx |\delta x|\cdot |f'(x)|$ and $|f'(x)|$ is absolute condition number.
+\item $\mathbb{R}^{(3x3)}$ means real number matrix and $\mathbb{C}^{(3x3)}$ means complex number matrix.
+\item some norm axioms
+\item P-norm  could be defined as $||x||_p = (\Sigma_i|x_i|^p)^{1/p}$.
+\item Euclidean norm: p-norm when p = 2
+\item taxicab norm: p-norm when p = 1
+\item $\infty-norm$ or infinity norm: p-norm p = $\infty$
+\item Cauchy-Schwartz inequality: $|<x,y>| \leq \sqrt{<x,x> \cdot <y,y>}$
+\item Inner product: Hard to give a definition, but could be think as a space created by vectors and scalars, related Legendre Polynomial.
+\item General strategy to show a = 0: a= -a
+\item Max-norm: $max_{ij}|a_{ij}$ and Frobenius norm :$(\Sigma |a_{ij}|^2)^{1/2}$
+\item Spectral theory for symmetric matrix
+\item An operator norm is a matrix norm.
+\item Matrix norm could be think as the maximum strectch.
+\item How to compute singular value of an matrix
+\item residual: $r = A \hat{x}- b$  
+\item condition number of a matrix: $\kappa(A) = ||A^{-1}|| \cdot ||A||$
 \end{itemize}
 
 \textbf{Software Code:}
@@ -97,7 +111,10 @@ We compute $f(x+\delta x)-f(x) \approx |\delta x|\cdot |f'(x)|$ and $|f'(x)|$ is
 \item Finished programming hw 1. The questions I picked are Problem.32  Most nonzero elements in row  and Problem 17. Find all elements less than 0 or greater than 10 and replace them with NaN. 
 \item These problems are pretty easy, and good to know we can define NaN by float('nan').
 \end{itemize}
+
+
 \begin{verbatim}
+
 '''
 Problem 32. Most nonzero elements in row
 Given the matrix a, return the index r of the row with the most nonzero

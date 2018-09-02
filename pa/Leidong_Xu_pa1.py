@@ -1,15 +1,16 @@
 '''
-Programmming HW 1. 
+Programmming HW 1 at Math 715. 
 '''
+
+
+import numpy as np
+
 '''
 Problem 32. Most nonzero elements in row
 Given the matrix a, return the index r of the row with the most nonzero
 elements. Assume there will always be exactly one row that matches this
 criterion.
 '''
-
-import numpy as np
-
 
 def mostnonzero(matrix):
     row = []
@@ -43,6 +44,7 @@ def replacenan(matrix):
 
 
 if __name__ == "__main__":
+	#test function
     A = np.array([[1, 2, 0, 0, 0], [0, 0, 5, 0, 0],
                   [2, 7, 2, 6, 0], [0, 6, 9, 3, 3]], dtype='float64')
 
