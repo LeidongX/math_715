@@ -187,7 +187,7 @@ det (  [[  1,   1,   1,   1],
 
 \textbf{Software Code:}
 \begin{itemize}
-\item I have not finished PA 2, but there are two new numpy functions and some latex funtions.
+\item I have not finished PA 2, but there are two new numpy functions and some latex functions.
 \item numpy.finfo: Machine limits for floating point types. For example:
 \begin{verbatim}
 print(np.finfo(float).eps)
@@ -211,5 +211,65 @@ array([[  1,   1,   1,   1],
 \item Pi notation $\prod_{i = 1}^{n} a_{i}$ by \begin{verbatim} \prod_{i = 1}^{n} a_{i} \end{verbatim}
 \end{itemize}
 
+
+
+\newpage
+\textbf{Week 4:}
+This week, I went over some knowledge about different matrix factorization.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em Model order reduction using DMD modes and adjoint DMD modes}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item SPD: symmetric positive-defined matrix.
+\item Singular value can be thought dimensional, etc, largest singular value is $||A||_2$, which could be treated as the length of semi-major axis.
+\item Gram–Schmidt process
+\item LU factorization
+\item leading principal: The determinant of a principal submatrix is called the principal minor of A. The leading principal submatrix of order k of an n × n matrix is obtained by deleting the last n − k rows and column of the matrix. 
+\item Matrix Minor: the remain matrix from delecting some rows and columns from original matrix.
+\item Permutation matrix: a matrix have a '1' at every row and column, all others are zero.
+\item Cholesky factorization(Cholesky decomposition): a decomposition of a Hermitian, positive-definite matrix into the product of a lower triangular matrix and its conjugate transpose.
+
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item N/A
+\end{itemize}
+
+\newpage
+\textbf{Week 5:}
+This week, I went over some knowledge about Cholesky factorization and finite difference method. I'm pretty familiar with this method but I have never think about adjust the matrix feature to achieve a better performance when using directly method.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em On Dynamic Mode Decomposition: Theory and Applications}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item ONB: Orthonormal Basis 
+\item  spectral theorem for symmetric matrices
+\item Two different ways to think matrix multiplication 
+\item Change of Variables 
+\item Gershgorin circle theorem
+\item Eigenvalue of A is real $\xrightarrow{}$ All the element of A are strictly positive
+
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item The machine epsilon of float 64 (double precision) is around 2.220446049250313e-16, and the smallest nonzero number could be shown is around 1.1102230246251565e-16.
+\item np.log could directly apply on a array, so do not use for loop.
+\item machine epsilon could be import by np.finfo(float).eps
+\item numpy.arange could be a alternative of np.linspace. Instead of input how many points needed, we could define the start point, end point and the space.
+\end{itemize}
 \end{document}
 
