@@ -271,5 +271,277 @@ This week, I went over some knowledge about Cholesky factorization and finite di
 \item machine epsilon could be import by np.finfo(float).eps
 \item numpy.arange could be a alternative of np.linspace. Instead of input how many points needed, we could define the start point, end point and the space.
 \end{itemize}
+
+\newpage
+\textbf{Week 6:}
+This week, I went over some knowledge about Cholesky factorization and finite difference method. I'm pretty familiar with this method but I have never think about adjust the matrix feature to achieve a better performance when using directly method.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em Dynamic mode decomposition of numerical and experimental data}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item How to solve Least Squares:
+\item (1)Form $ A^T A \& A^Tb$
+\item (2)Cholesky $ A^T A = L^TL$
+\item (3)Solve $ L^Tw = A^Tb$
+\item (4)Solve $ Lx = w$
+\item rank nullity
+\item dim(A) denotes the dimension of a vector space A.
+\item QR decomposition : a decomposition of a matrix A into a product A = QR of an orthogonal matrix Q and an upper triangular matrix R.
+\item Normal Equation: $ A^T Ax = A^Tb$ where $A^TA$ is a normal matrix. 
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item \textbf{numpy.polyfit(x, y, deg, rcond=None, full=False, w=None, cov=False)}:Least squares polynomial fit.Fit a polynomial p(x) = p[0] * x**deg + ... + p[deg] of degree deg to points (x, y). Returns a vector of coefficients p that minimises the squared error.
+
+\end{itemize}
+
+\newpage
+\textbf{Week 7:}
+This week, we talked about mainly SVD-singular value decomposition and some other related topics which included least square with SVD, lower rank approximation and pseudo-inverse. 
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item Continue read {\em Dynamic mode decomposition of numerical and experimental data}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item null space: If T is a linear transformation of $R^n$, then the null space $Null(T)$, also called the kernel $Ker(T)$, is the set of all vectors X such that$ T(X) = 0$
+\item column space: a matrix A is the span (set of all possible linear combinations) of its column vectors
+\item low-rank approximation: In mathematics, low-rank approximation is a minimization problem, in which the cost function measures the fit between a given matrix (the data) and an approximating matrix (the optimization variable), subject to a constraint that the approximating matrix has reduced rank. $A = \Sigma \sigma_j u_j v_j^T $
+\item pseudo-inverse
+
+
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item  array[xxxx], where xxxx could be an statement instead of index. I have used python for over one year and feel so surprised about this feature. This feature achieve restriction or selection in a single line of code. etc. Diag[Diag==np.amin(Diag)] *= 10**(-u*16), replaced the mininum values in this array.
+\item \textbf{numpy.random.rand :} Create an array of the given shape and populate it with random samples from a uniform distribution over [0, 1).
+\item \textbf{numpy.random.normal :} Draw random samples from a normal (Gaussian) distribution.
+\item \textbf{matplotlib.pyplot.subplot :} Plot multiple pictures in a specific location and order.
+\item Plot np.array([ value1, value2]) and  np.array([ value3, value4]) directly could plot a straight line from (value1,value3) to (value2,value4).
+\end{itemize}
+
+\newpage
+\textbf{Week 8:}
+This week, we talked about mainly pseudo-inverse, gradient of linear operator and some other concepts of numerical example of applying SVD. 
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item {\em None}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item if web define $A = \sum \sigma_j u_j v_j$ and $A^+ = \sum \sigma_j^{-1} u_j v_j$ , then $AA^+ = \sum u_j u_j^T$.
+\item Gradient matrix
+\item full rank: every row and column is not independent of each other. 
+\item rank deficient matrix: A matrix is said to have full rank if its rank is either equal to its number of columns or to its number of rows (or to both). A matrix that does not have full rank is said to be rank deficient.
+\item $div_x(f) = \sum f(x,y)$
+\item algebraic connectivity: The algebraic connectivity (also known as Fiedler value or Fiedler eigenvalue) of a graph G is the second-smallest eigenvalue of the Laplacian matrix of G.[1] This eigenvalue is greater than 0 if and only if G is a connected graph. This is a corollary to the fact that the number of times 0 appears as an eigenvalue in the Laplacian is the number of connected components in the graph. The magnitude of this value reflects how well connected the overall graph is. It has been used in analysing the robustness and synchronizability of networks.
+\item 
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+\newpage
+\textbf{Week 9:}
+This week, the main work I have done is review the basic linear algebra knowledge for the close- book mideterm.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item N/A
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item det(I) = 1
+\item det(singular matrix) = 0
+\item det(($A^{T}$) =  det(A)
+\item det($A^{-1}$) = 1/ det(A)
+\item det(AB) = det(A)det(B)
+\item det(cA) = $c^ndet(A)$ where n is the matrix demension
+\item det(triangular matrix) =  $\prod_{i = 1}^{n} a_{ii}$
+\item  det (I + $uv^T$) = 1 + uv
+\item  det (X + AB) = det(X)det(T+$BX^{-1}A$)
+\item cramer rule: $x_i = \frac{det(A_i)}{det(A)}$ where is $A_i$ is A replace $A[:,i] = b$
+\item trace(A) = $\sum^n_1 a_{ii}$
+\item trace(A+B) = trace(A) + trace(B)
+\item trace($A^T$) = trace(A)
+\item trace(AB) = trace(A)trace(B)
+\item trace(ABC) = trace(BCA) = trace(CAB)
+\item $||x||_p = (\sum |x_i|^p)^{1/p}$
+\item $||A||_1 = max_{1\leq j \leq n} \sum_{i =1} |a_{ij}|$ the maximum value of the sum of column vector
+\item $||A||_{\infty} = max_{1\leq i \leq n} \sum_{j =1} |a_{ij}|$ the maximum value of the sum of row vector
+\item $||A||_{2} = trace(A^TA) = \sigma_{max}(A) = \sqrt{\lambda_{max}(A^TA)}$ 
+\item $||A||_{F} \sqrt{\sum \sum |a_{ij}|^2} $
+\item cond = $\frac{\sigma_1(A)}{\sigma_n(A)}$ = = $\frac{\sigma_{max}(A)}{\sigma_{min}(A)}$
+\item cholosky: $A = LL^T$
+\item QR decomposition: $A = QR$, where $v_1 = [a_1,a_2-(q_1^Ta_2)\cdot q_1,a_3-(q_1^Ta_3)\cdot q_1 -(q_2^Ta_3)\cdot q_2]$, , which is equivalent to $c = \frac{A_T c}{A^TA}A - \frac{B^Tc}{B^TB}B $,then $q_n = normalize(v_n)$
+\end{itemize}
+\textbf{Software Code:}
+\begin{itemize}
+\item  Not Applied
+\end{itemize}
+
+\newpage
+\textbf{Week 10:}
+This week, we only had two lectures and started Chapter 4: Nonsymmetric eigenvalue problems.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item \textbf{Calculating Time Eigenvalues of the Neutron Transport Equation with Dynamic Mode Decomposition}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item Jordan Matrix Decomposition: The Jordan matrix decomposition is the decomposition of a square matrix M into the form $ M =SJS^{_1}$ where M and J are similar matrix, J is a matrix of Jordan canonical form, and $S^(-1)$ is the matrix inverse of S.
+\item Jordan normal form (Jordan canonical form): a linear operator on a finite-dimensional vector space is an upper triangular matrix of a particular form called a Jordan matrix, representing the operator with respect to some basis. Such a matrix has each non-zero off-diagonal entry equal to 1, immediately above the main diagonal (on the superdiagonal), and with identical diagonal entries to the left and below them.
+\item A system is called under damped, if damping ratio (denoted by zeta) is less than 1. Here the system oscillates with a gradual decrements to zero.
+\item A system is called over damped, if the damping ratio is greater than one, here system shows tendencies to achieve equilibrium without oscillating. 
+\item A system is called critically damped if damping ration for the system is exactly one. Here system shows the tendencies to come to equilibrium as quickly as possible without damping.
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item plt.scatter(w.real,w.imag): this command could plot the complex number w on a 2d picture where x is real number axis and y axis is the imaginary axis.
+\item plt.figure could set the picture size and plt.subplot could set the order of pictures.
+\item plt.hist could give a histogram in python and we can use
+\begin{verbatim}
+    fig, ax = plt.subplots()
+    plt.hist(singular_min_list,bins= x)
+    plt.xticks(x)
+    ax.set_xscale('log', basex=2)
+\end{verbatim}
+to give a log scale on x axis and set the beam range by a list.
+\end{itemize}
+
+
+\newpage
+\textbf{Week 11:}
+This week, major topic was still Chapter 4. We introduce many new concepts include Schur Decomposition, quasi upper triangular and so on.
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item N/A
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item Schur decomposition: A is a n × n square matrix with complex entries, then A can be expressed as  $A = Q U Q^{-1}$ where Q is a unitary matrix and U is an upper triangular matrix, which is called a Schur form of A. Since U is similar to A, it has the same spectrum, and since it is triangular, its eigenvalues are the diagonal entries of U.
+\item Quasi-triangular matrices: Real Schur canonical form. IF A is real, there exists a real orthogonal matrix V such that $V^T A V = T$ is quasi-upper triangular. This means that T is block upper triangular with 1-by1 and 2-by-2 blocks on the diagonal. Its eigenvalues are the eigenvalues of the diagonal blocks. The 1-by-1 blocks correspond to real eigenvalues, and the 2-by-2 blocks to complex conjugate pairs.
+\end{itemize}
+\textbf{Software Code:}
+\begin{itemize}
+\item  Not Applied
+\end{itemize}
+
+\newpage
+\textbf{Week 12:}
+This week(11/5-11/11),  we continue to study chapter 4. And there are some new concepts include power method, spectral mapping theorem and so on..
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item \textbf{N/A}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item power method: given a diagonalizable matrix A, the algorithm will produce a number $\lambda$ , which is the greatest (in absolute value) eigenvalue of A, and a nonzero vector  v, the corresponding eigenvector of $\lambda$ , such that $Av=\lambda v$. The algorithm is also known as the Von Mises iteration
+\item Spectral mapping theorem: Let A be an operator on an n-dimensional real or complex vector space V and let q(x) be any polynomial. Then the spectrum of the polynomial operator q(A) is the image of the spectrum of A
+under q, i.e $sp(q(A)) = q(sp(A))$
+\item Distinct eigenvalues: Suppose that the eigenvalues  $ \lambda_1,\ldots,\lambda_n$ of $ A$ are distinct. Then the corresponding eigenvectors $ \mathbf{v}_1,\ldots,\mathbf{v}_n$ are linearly independent. 
+\item Propertites of similar matrix: If two matrix are similar, then they share same Rank, Determinant, Trace, Eigenvalues (though the eigenvectors will in general be different), Characteristic polynomial, Minimal polynomial (among the other similarity invariants in the Smith normal form), Elementary divisors.
+\item 
+\end{itemize}
+
+\textbf{Software Code:}
+\begin{itemize}
+\item zip function example at python:
+\begin{verbatim}
+name = [ "Manjeet", "Nikhil", "Shambhavi", "Astha" ] 
+roll_no = [ 4, 1, 3, 2 ] 
+marks = [ 40, 50, 60, 70 ] 
+  
+# using zip() to map values 
+mapped = zip(name, roll_no, marks) 
+  
+# converting values to print as set 
+mapped = set(mapped) 
+  
+# printing resultant values  
+print ("The zipped result is : ",end="") 
+print (mapped) 
+\end{verbatim}
+
+\end{itemize}
+
+
+\newpage
+\textbf{Week 13:}
+This week(11/12-11/18), the major topic was still Chapter 4. 
+
+\textbf{References or papers consulted:}
+\begin{itemize}
+
+\item \textbf{DATA-DRIVEN SURROGATE MODEL TO PREDICT ISOTOPIC COMPOSITION USING DYNAMIC MODE DECOMPOSITION}
+
+\end{itemize}
+
+\textbf{Things I learned:}
+\begin{itemize}
+\item courant fischer theorem: also known as min-max theorem or variational theorem, which  is a result that gives a variational characterization of eigenvalues of compact Hermitian operators on Hilbert spaces. Suppose $A \in M_n$ is Hermitian, and for each $1 \leq k \leq n$, let $\{ S_k^{\alpha} \}_{α\in I_k}$
+denote the set of all k−dimensional linear subspaces of $\mathbb{C}^n$. Also, enumerate the n eigenvalues $\lambda_1$, $\cdot \cdot \cdot$, $\lambda_n$ (counting multiplicity) in increasing order, i.e. $\lambda_1$ $\leq \cdot \cdot \cdot \leq $ $\lambda_n$. Then, we have 
+\item $min \ max \frac{<Ax,x>}{||x||^2} = \lambda _k$
+\item Weyl's theorem on complete reducibility: $|\alpha_j-\hat{\alpha_j}| \leq ||E||_2 $     
+\item I think PA6 is doable. However,I think it is important to let the students know the objective of the PA if we want to do something numerical to a verify a lemma.
+\end{itemize}
+\textbf{Software Code:}
+\begin{itemize}
+\item  Python dictionary example:
+\begin{verbatim}
+  ## Can build up a dict by starting with the the empty dict {}
+  ## and storing key/value pairs into the dict like this:
+  ## dict[key] = value-for-that-key
+  dict = {}
+  dict['a'] = 'alpha'
+  dict['g'] = 'gamma'
+  dict['o'] = 'omega'
+
+  print dict  ## {'a': 'alpha', 'o': 'omega', 'g': 'gamma'}
+
+  print dict['a']     ## Simple lookup, returns 'alpha'
+  dict['a'] = 6       ## Put new key/value into dict
+  'a' in dict         ## True
+  ## print dict['z']                  ## Throws KeyError
+  if 'z' in dict: print dict['z']     ## Avoid KeyError
+  print dict.get('z')  ## None (instead of KeyError)
+\end{verbatim}
+\end{itemize}
+
 \end{document}
 
